@@ -2,7 +2,7 @@
   "default": {
     "stdexec": {
       "baseline": "2023-11-21",
-      "port-version": 3
+      "port-version": 4
     }
   }
 }
