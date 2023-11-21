@@ -1,7 +1,7 @@
 {
   "name": "stdexec",
   "version-date": "2023-11-21",
-  "port-version": 3,
+  "port-version": 4,
   "description": "stdexec is an experimental reference implementation of the Senders model of asynchronous programming proposed by P2300 - std::execution for adoption into the C++ Standard.",
   "homepage": "https://github.com/NVIDIA/stdexec",
   "license": "Apache-2.0",
