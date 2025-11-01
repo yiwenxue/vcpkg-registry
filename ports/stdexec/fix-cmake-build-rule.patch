@@ -1,0 +1,26 @@
+From bc032a5890f253d7163a7a01610d6d0b2b2ffd4e Mon Sep 17 00:00:00 2001
+From: Yiwen Xue <15225434259xue@gmail.com>
+Date: Sat, 1 Nov 2025 18:55:44 +0800
+Subject: [PATCH] fix cmake build rule
+
+---
+ CMakeLists.txt | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ca442243..649e1f41 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -220,9 +220,6 @@ endif()
+ 
+ add_library(STDEXEC::stdexec ALIAS stdexec)
+ 
+-# Don't require building everything when installing
+-set(CMAKE_SKIP_INSTALL_ALL_DEPENDENCY ON)
+-
+ # Support target for examples and tests
+ add_library(stdexec_executable_flags INTERFACE)
+ 
+-- 
+2.43.0
+

@@ -2,9 +2,11 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO NVIDIA/stdexec
-    REF 6b9f3501dced0e39611f93ff795da83d24364f30
-    SHA512 d9a88b5095234c114cc45cef352662677b9f832065f3eec9c0f371547a5627672c3cf85ca19de702b2cd78ba5c1653b5e8156abe2f52d1e27ba014929b9336f2
+    REF 1f6379682dd1598c9b48313fa6dfdae620bc8535
+    SHA512 268d580ec3dab708b1ee32d57982dd8f773d91d8d2af324c320b8599900ca3b586973507ed861753bd716f70b09393deb639e3e806fc2631acabb37c64e9cd7c
     HEAD_REF main
+    PATCHES
+        fix-cmake-build-rule.patch
 )
 
 vcpkg_from_github(
@@ -16,16 +18,16 @@ vcpkg_from_github(
 )
 
 vcpkg_download_distfile(RAPIDS_cmake
-    URLS "https://raw.githubusercontent.com/rapidsai/rapids-cmake/branch-23.02/RAPIDS.cmake"
+    URLS "https://raw.githubusercontent.com/rapidsai/rapids-cmake/branch-24.02/RAPIDS.cmake"
     FILENAME "RAPIDS.cmake"
-    SHA512 e7830364222a9ea46fe7756859dc8d36e401c720f6a49880a2945a9ebc5bd9aa7e40a8bd382e1cae3af4235d5c9a7998f38331e23b676af7c5c72e7f00e61f0c
+    SHA512 5ac649e93260e491e592302255e110441fb4582684fa28b0391d1017330e56b8d01e851a24160235c63976e82c14593dd90cc6a4fbfe21a5513769a787d7e1d9
 )
 file(COPY "${RAPIDS_cmake}" DESTINATION "${CURRENT_BUILDTREES_DIR}/${TARGET_TRIPLET}-rel/")
 
 vcpkg_download_distfile(execution_bs
-    URLS "https://raw.githubusercontent.com/brycelelbach/wg21_p2300_execution/R7/execution.bs"
+    URLS "https://raw.githubusercontent.com/cplusplus/sender-receiver/main/execution.bs"
     FILENAME "execution.bs"
-    SHA512 90f2a1d150b03c29bb05a5420e091c2371cb973335a089916716d778bc1081764436dc1ff0fec60f642ddb0ca5492c8b0c3a6d5451c2d60a42911f918fe980fa
+    SHA512 091c327eb1d161c46d77e7e0265c16d3de0c7fe7e1714c6891fbc6914d7147aed83ea28ba5a1f79703c9b00c84e7c2351fcf9106dacec46f634b0795692bc086
 )
 file(COPY "${execution_bs}" DESTINATION "${CURRENT_BUILDTREES_DIR}/${TARGET_TRIPLET}-rel/")
 
