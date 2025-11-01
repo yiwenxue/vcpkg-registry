@@ -25,7 +25,7 @@ vcpkg_download_distfile(RAPIDS_cmake
 file(COPY "${RAPIDS_cmake}" DESTINATION "${CURRENT_BUILDTREES_DIR}/${TARGET_TRIPLET}-rel/")
 
 vcpkg_download_distfile(execution_bs
-    URLS "https://raw.githubusercontent.com/cplusplus/sender-receiver/main/execution.bs"
+    URLS "https://raw.githubusercontent.com/cplusplus/sender-receiver/a1790ddda5dcdf70f0658d0b50794649caa6c96f/execution.bs"
     FILENAME "execution.bs"
     SHA512 091c327eb1d161c46d77e7e0265c16d3de0c7fe7e1714c6891fbc6914d7147aed83ea28ba5a1f79703c9b00c84e7c2351fcf9106dacec46f634b0795692bc086
 )
